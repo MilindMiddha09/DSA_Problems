@@ -1,6 +1,8 @@
 class Solution {
 public:
     int bitwiseComplement(int n) {
+        
+        //Edge Case
         if(n==0)
         return 1;
 
