@@ -1,0 +1,26 @@
+
+int sqrtN(long long int N)
+{
+    int start = 0;
+    unsigned int end = N;
+    long long int mid;
+    long long int ans = -1;
+    long long int square;
+    while(start<=end)
+    {
+        mid = (start + end)/2;
+        square = mid*mid;
+        if(square == N)
+            return mid;
+        if(square<N)
+        {
+            ans = mid;
+            start = mid+1;
+        }
+        else
+        {
+            end = mid - 1;
+        }
+    }
+    return ans;
+}
